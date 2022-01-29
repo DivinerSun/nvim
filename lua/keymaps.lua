@@ -90,4 +90,8 @@ keymap('n', '<leader>h', ':BufferCloseBuffersLeft<CR>', opts)
 -- 关闭其他Buffer不关闭当前Buffer
 keymap('n', '<leader>o', ':BufferCloseAllButCurrent<CR>', opts)
 
+-- Gitsigns
+keymap('n', '<leader>g', ':Gitsigns blame_line<CR>', opts)
+keymap('n', '<leader>tb', ':Gitsigns toggle_current_line_blame<CR>', opts)
+
 

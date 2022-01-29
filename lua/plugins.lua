@@ -7,6 +7,9 @@ end
 return require('packer').startup(function(use)
   -- 插件配置[[start]]
   
+  -- Packer
+  use "wbthomason/packer.nvim"
+  
   -- 编码时长统计
   use 'wakatime/vim-wakatime'
 
@@ -36,6 +39,14 @@ return require('packer').startup(function(use)
 
   -- Tabline插件
   use 'romgrk/barbar.nvim'
+
+  -- Git插件
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  } 
   
   -- 插件配置[[end]]
 
