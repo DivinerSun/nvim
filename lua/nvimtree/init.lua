@@ -1,5 +1,6 @@
 vim.g.nvim_tree_quit_on_open = 1
-vim.g.nvim_tree_indent_markers = 1
+-- 开启则会隐藏左侧图标
+-- vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_root_folder_modifier = ':~'
@@ -11,6 +12,9 @@ vim.g.nvim_tree_icon_padding = ' '
 vim.g.nvim_tree_respect_buf_cwd = 1
 vim.g.nvim_tree_create_in_closed_folder = 0
 vim.g.nvim_tree_refresh_wait = 500
+
+vim.opt.termguicolors = true
+vim.cmd [[highlight NvimTreeFolderIcon guifg=#E06C75 gui=nocombine]]
 
 vim.g.nvim_tree_icons = {
   default = "",
@@ -31,7 +35,7 @@ vim.g.nvim_tree_icons = {
     empty_open = "",
     symlink = "",
     arrow_open = "",
-    arrow_closed = "",
+    arrow_closed = "",
   },
   lsp = {
     hint = "",

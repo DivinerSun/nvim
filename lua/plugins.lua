@@ -23,8 +23,19 @@ return require('packer').startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'},
-    config = function() require'nvim-tree'.setup {} end
   }
+
+  -- StatusLine插件
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Indent
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- Tabline插件
+  use 'romgrk/barbar.nvim'
   
   -- 插件配置[[end]]
 
