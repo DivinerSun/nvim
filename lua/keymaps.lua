@@ -19,11 +19,22 @@ vim.g.maplocalleader = " "
 -- 常用快捷键
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
-
+-- 上下多行快速跳转
 keymap("n", "<C-j>", "5j", opts)
 keymap("n", "<C-k>", "5k", opts)
 keymap("v", "<C-j>", "5j", opts)
 keymap("v", "<C-k>", "5k", opts)
+-- 行首行尾快捷键
+keymap("i", "<C-h>", "<Home>", opts)
+keymap("i", "<C-l>", "<End>", opts)
+keymap("n", "<C-h>", "<S-^>", opts)
+keymap("n", "<C-l>", "<S-$>", opts)
+keymap("v", "<C-h>", "<S-^>", opts)
+keymap("v", "<C-l>", "<S-$>", opts)
+
+-- 缩进快捷键
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 
 -- 切换NvimTree
 keymap("n", "<leader>e", ":lua require'tabline/tree'.toggle_tree()<CR>", opts)
@@ -32,6 +43,19 @@ keymap("n", "<leader>e", ":lua require'tabline/tree'.toggle_tree()<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":wq<CR>", opts)
+
+-- 移动行
+keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "p", '"_dP', opts)
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- 拆分窗口之间移动
 -- keymap("n", "<C-h>", "<C-w>h", opts)
