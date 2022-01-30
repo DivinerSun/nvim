@@ -40,8 +40,8 @@ vim.o.wrap = false
 vim.o.splitbelow = true
 vim.o.splitright = true
 -- Times
-vim.o.timeoutlen = 100
-vim.o.updatetime = 300
+vim.o.timeoutlen = 1000
+vim.o.updatetime = 2000
 
 -- 加载其他自定义配置
 require('theme')
@@ -49,5 +49,12 @@ require('nvimtree')
 require('statusline')
 require('indent')
 require('git')
-
+require('package')
+require('color')
+require('finder')
+require('term')
+require('treesitter')
+-- require('autopairs')
+require('comments')
+require('lsp')
 

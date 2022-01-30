@@ -47,6 +47,58 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim'
     },
   } 
+
+  -- package.json插件
+  use{
+    "vuki656/package-info.nvim",
+    requires = { "MunifTanjim/nui.nvim" }
+  }
+
+  -- 平滑滚动
+  use {
+    'karb94/neoscroll.nvim',
+    config = function()
+      require('neoscroll').setup()
+    end
+  }
+
+  -- colorizer
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- Terminal
+  use {"akinsho/toggleterm.nvim"}
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use "windwp/nvim-autopairs"
+  use 'p00f/nvim-ts-rainbow'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use "nvim-treesitter/playground"
+
+  -- 注释相关插件
+  use {
+    'numToStr/Comment.nvim'
+  }
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end
+  }
+
+  use "nvim-lua/popup.nvim"
+  use "folke/lua-dev.nvim"
   
   -- 插件配置[[end]]
 

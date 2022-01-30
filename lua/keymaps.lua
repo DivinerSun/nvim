@@ -41,8 +41,8 @@ keymap("n", "<leader>e", ":lua require'tabline/tree'.toggle_tree()<CR>", opts)
 
 -- 保存文件
 keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("n", "<leader>w", ":w<CR>", opts)
-keymap("n", "<leader>q", ":wq<CR>", opts)
+keymap("n", "<leader>w", ":w!<CR>", opts)
+keymap("n", "<leader>q", ":q<CR>", opts)
 
 -- 移动行
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -93,5 +93,34 @@ keymap('n', '<leader>o', ':BufferCloseAllButCurrent<CR>', opts)
 -- Gitsigns
 keymap('n', '<leader>g', ':Gitsigns blame_line<CR>', opts)
 keymap('n', '<leader>tb', ':Gitsigns toggle_current_line_blame<CR>', opts)
+
+-- package-info 快捷键
+-- Show package versions
+keymap("n", "<leader>ns", ":lua require('package-info').show()<CR>", opts)
+-- Hide package versions
+keymap("n", "<leader>nc", ":lua require('package-info').hide()<CR>", opts)
+-- Update package on line
+keymap("n", "<leader>nu", ":lua require('package-info').update()<CR>", opts)
+-- Delete package on line
+keymap("n", "<leader>nd", ":lua require('package-info').delete()<CR>", opts)
+-- Install a new package
+keymap("n", "<leader>ni", ":lua require('package-info').install()<CR>", opts)
+-- Reinstall dependencies
+keymap("n", "<leader>nr", ":lua require('package-info').reinstall()<CR>", opts)
+-- Install a different package version
+keymap("n", "<leader>np", ":lua require('package-info').change_version()<CR>", opts)
+
+-- Telescope快捷键
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
+
+-- ToggleTerm快捷键
+keymap("n", "<C-t>", ":ToggleTerm<CR>", opts)
+
+-- Comment
+keymap("n", "<leader>/", ":lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+keymap("v", "<leader>/", ":lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
 
 
