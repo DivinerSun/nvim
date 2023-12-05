@@ -63,4 +63,10 @@ return {
       },
     },
   },
+  -- 配置变量重命名插件
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    config = true,
+  },
 }
