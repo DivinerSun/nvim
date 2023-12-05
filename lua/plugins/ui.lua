@@ -112,4 +112,19 @@ return {
       return opts
     end,
   },
+  -- 配置Noice通知消息
+  {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      table.insert(opts.routes, {
+        filter = {
+          event = "notify",
+          find = "No information available",
+        },
+        opts = {
+          skip = true,
+        },
+      })
+    end,
+  },
 }
