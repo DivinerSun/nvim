@@ -25,3 +25,8 @@ keymap("v", "<C-k>", "5k", opts)
 keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-q>", ":bdelete<CR>", opts)
+
+-- 重命名快捷键
+keymap("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })

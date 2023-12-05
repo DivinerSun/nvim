@@ -137,6 +137,8 @@ return {
           skip = true,
         },
       })
+      opts.presets.lsp_doc_border = true
+      opts.presets.inc_rename = true
     end,
   },
   -- 配置 IncLine
