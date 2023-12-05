@@ -161,6 +161,11 @@ return {
       end
 
       local opts = {
+        highlight = {
+          groups = {
+            InclineNormal = { guibg = "#822455" },
+          },
+        },
         debounce_threshold = { falling = 500, rising = 250 },
         render = function(props)
           local bufname = vim.api.nvim_buf_get_name(props.buf)
