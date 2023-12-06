@@ -31,6 +31,7 @@ return {
         end,
       }
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+        { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
