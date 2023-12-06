@@ -70,4 +70,10 @@ return {
       },
     },
   },
+  -- 注释插件
+  {
+    "numToStr/Comment.nvim",
+    event = "BufWinEnter",
+    opts = {},
+  },
 }

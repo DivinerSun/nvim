@@ -1,0 +1,204 @@
+{
+  "name": "dart/flutter-snippets",
+  "displayName": "Dart/Flutter Snippets",
+  "description": "Dart/Flutter Snippets Support",
+  "version": "1.0.6",
+  "publisher": "Diviner",
+  "icon": "images/logo.png",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "keywords": [
+    "Dart",
+    "Flutter",
+    "snippets"
+  ],
+  "author": {
+    "name": "Diviner",
+    "email": "sqq_job@sina.com",
+    "url": "https://github.com/Diviner"
+  },
+  "galleryBanner": {
+    "color": "#58bc58",
+    "theme": "light"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "scripts": {
+    "build": "vsce package"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/async_notifier_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/async_notifier.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/notifier_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/notifier.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/stream_notifier_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/stream_notifier.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/consumer.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/change_notifier_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/change_notifier.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/future_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/state_notifier.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/state_notifier_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/state_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/stream_provider.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/consumer_widgets.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/hook_consumer.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/provider_listenable.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./flutter-riverpod-snippets/snippets/code_generator.code-snippets"
+      },
+      {
+        "language": "dart",
+        "path": "./awesome-flutter-snippets/snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript-snippet/snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./javascript-snippet/snippets/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript-snippet/snippets/javascript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./javascript-snippet/snippets/javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+      },
+      {
+        "language": "vue",
+        "path": "./vue-vscode-snippets/snippets/vue.json"
+      },
+      {
+        "language": "jade",
+        "path": "./vue-vscode-snippets/snippets/vue-pug.json"
+      },
+      {
+        "language": "html",
+        "path": "./vue-vscode-snippets/snippets/vue-template.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./vue-vscode-snippets/snippets/vue-template.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-vscode-snippets/snippets/vue-script.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-vscode-snippets/snippets/vue-script-vuex.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-vscode-snippets/snippets/vue-script-router.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-vscode-snippets/snippets/nuxt-config.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vue-vscode-snippets/snippets/nuxt-script.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-vscode-snippets/snippets/vue-script.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-vscode-snippets/snippets/vue-script-vuex.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-vscode-snippets/snippets/vue-script-router.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vue-vscode-snippets/snippets/nuxt-config.json"
+      },
+      {
+        "language": "html",
+        "path": "./html/snippets/html.json"
+      }
+    ]
+  }
+}
