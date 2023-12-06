@@ -252,11 +252,23 @@ return {
 
       return {
         options = {
-          theme = "auto",
+          theme = "tokyonight",
           globalstatus = true,
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
-          disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+          disabled_filetypes = {
+            "TelescopePrompt",
+            "packer",
+            "alpha",
+            "dashboard",
+            "NvimTree",
+            "Outline",
+            "DressingInput",
+            "toggleterm",
+            "lazy",
+            "mason",
+            statusline = { "dashboard", "alpha", "starter" },
+          },
           icons_enabled = true,
           always_divide_middle = true,
         },
