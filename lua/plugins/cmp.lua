@@ -1,6 +1,7 @@
 local Util = require("lazyvim.util")
 
 return {
+  { "onsails/lspkind-nvim", lazy = true },
   {
     "hrsh7th/nvim-cmp",
     version = false,
@@ -12,6 +13,10 @@ return {
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-emoji",
+      "f3fora/cmp-spell",
+      "lukas-reineke/cmp-rg",
+      "kristijanhusak/vim-dadbod-completion",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
       {
         "roobert/tailwindcss-colorizer-cmp.nvim",
         config = function()
@@ -24,6 +29,7 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       local luasnip = require("luasnip")
+      local lspkind = require("lspkind")
 
       opts.snippet = {
         expand = function(args)
@@ -46,6 +52,43 @@ return {
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
+
+      opts.window = {
+        completion = cmp.config.window.bordered({
+          col_offset = -3,
+          side_padding = 0,
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
+        documentation = cmp.config.window.bordered({
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
+      }
+      opts.formatting = {
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, vim_item)
+          local kind = lspkind.cmp_format({
+            mode = "symbol_text",
+            maxwidth = 50,
+          })(entry, vim_item)
+          local strings = vim.split(kind.kind, "%s", { trimempty = true })
+
+          if strings[1] ~= "Codeium" then
+            kind.kind = " " .. strings[1] .. " "
+            kind.menu = "    (" .. strings[2] .. ")"
+          else
+            kind.kind = " " .. vim.fn.nr2char(0xe708) .. " "
+            kind.menu = "    (" .. "Codeium" .. ")"
+          end
+
+          return kind
+        end,
+      }
+      opts.view = {
+        entries = { name = "custom", selection_order = "near_cursor" },
+      }
+      opts.experimental = {
+        ghost_text = true,
+      }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Up>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),

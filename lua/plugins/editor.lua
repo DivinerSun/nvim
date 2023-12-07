@@ -63,18 +63,6 @@ return {
       },
     },
   },
-  -- 文件顶部面包屑
-  {
-    "SmiteshP/nvim-navic",
-    dependencies = "neovim/nvim-lspconfig",
-    opts = {
-      lsp = {
-        auto_attach = true,
-        preference = nil,
-      },
-      highlight = true,
-    },
-  },
   -- 配置变量重命名插件
   {
     "smjonas/inc-rename.nvim",
@@ -252,7 +240,7 @@ return {
 
       return {
         options = {
-          theme = "tokyonight",
+          theme = "auto",
           globalstatus = true,
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },

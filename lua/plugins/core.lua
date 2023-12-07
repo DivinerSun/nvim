@@ -2,6 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
+      colorscheme = "catppuccin",
       -- 自定义图标
       icons = {
         misc = {
