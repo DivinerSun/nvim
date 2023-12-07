@@ -128,6 +128,14 @@
         "path": "./javascript-snippet/snippets/javascript.json"
       },
       {
+        "language": "javascriptreact",
+        "path": "./html/snippets/html.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./html/snippets/html.json"
+      },
+      {
         "language": "javascript",
         "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
       },

@@ -17,6 +17,7 @@ return {
       transparent_background = true,
       custom_highlights = function(C)
         return {
+          Comment = { fg = C.pink, bg = C.base },
           CmpItemKindSnippet = { fg = C.base, bg = C.mauve },
           CmpItemKindKeyword = { fg = C.base, bg = C.red },
           CmpItemKindText = { fg = C.base, bg = C.teal },
@@ -68,6 +69,9 @@ return {
             hints = { "undercurl" },
             warnings = { "undercurl" },
             information = { "undercurl" },
+          },
+          inlay_hints = {
+            background = false,
           },
         },
         navic = { enabled = true, custom_bg = "lualine" },

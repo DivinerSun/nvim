@@ -57,9 +57,13 @@ return {
         completion = cmp.config.window.bordered({
           col_offset = -3,
           side_padding = 0,
+          border = "rounded",
+          scrollbar = true,
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
         }),
         documentation = cmp.config.window.bordered({
+          border = "rounded",
+          scrollbar = true,
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
         }),
       }
