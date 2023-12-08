@@ -274,9 +274,22 @@ return {
     end,
   },
   {
+    "nvimtools/none-ls.nvim",
+    event = "LazyFile",
+    dependencies = { "mason.nvim" },
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      opts.root_dir = opts.root_dir
+        or require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git")
+      opts.sources = vim.list_extend(opts.sources or {}, {
+        nls.builtins.formatting.dart_format,
+      })
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
-      servers = { eslint = {} },
+      servers = { eslint = {}, dartls = {} },
       setup = {
         eslint = function()
           require("lazyvim.util").lsp.on_attach(function(client)
@@ -301,7 +314,8 @@ return {
     dependencies = {
       "rafamadriz/friendly-snippets",
       config = function()
-        require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
+        require("luasnip.loaders.from_vscode").lazy_load()
+        require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "./snippets" } })
       end,
     },
     opts = {

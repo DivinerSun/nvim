@@ -76,4 +76,15 @@ return {
     event = "BufWinEnter",
     opts = {},
   },
+  -- Dart插件
+  {
+    "dart-lang/dart-vim-plugin",
+    dependencies = { "natebosch/vim-lsc", "natebosch/vim-lsc-dart" },
+    config = function()
+      vim.g.dart_html_in_string = true
+      vim.g.dart_style_guide = 2
+      vim.g.dart_trailing_comma_indent = true
+      vim.g.lsc_auto_map = true
+    end,
+  },
 }
