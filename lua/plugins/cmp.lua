@@ -9,11 +9,13 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-emoji",
       "f3fora/cmp-spell",
+      "hrsh7th/cmp-calc",
       "lukas-reineke/cmp-rg",
       "kristijanhusak/vim-dadbod-completion",
       "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -45,6 +47,7 @@ return {
         { name = "tailwind" },
         { name = "tailwindcss" },
         { name = "buffer" },
+        { name = "calc" },
       }))
 
       local has_words_before = function()
@@ -161,6 +164,7 @@ return {
           end
         end,
         desc = "Comment",
+        mode = { "n", "v" },
       },
       { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
       { "<leader>f", "<cmd>Telescope find_files <CR>", "Find files" },

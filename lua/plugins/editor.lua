@@ -214,7 +214,7 @@ return {
         function()
           local msg = "[ LS Inactive ]"
           local buf_ft = vim.bo.filetype
-          local buf_clients = vim.lsp.get_active_clients()
+          local buf_clients = vim.lsp.get_active_clients({ bufnr = 0 })
           local buf_client_names = {}
           if next(buf_clients) == nil then
             if type(msg) == "boolean" or #msg == 0 then
@@ -235,7 +235,7 @@ return {
           msg = table.concat(unique_client_names, ", ")
           return "[" .. msg .. "]"
         end,
-        icon = icons.ui.Gear .. "",
+        icon = icons.ui.Fire .. "",
       }
 
       return {

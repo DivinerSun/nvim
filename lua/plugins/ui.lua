@@ -15,12 +15,19 @@ return {
     opts = {
       flavour = "mocha",
       transparent_background = true,
+      color_overrides = {
+        all = {
+          lavender = "#f7768e",
+          pink = "#FF81D0",
+        },
+      },
       custom_highlights = function(C)
         return {
-          Comment = { fg = C.pink, bg = C.base },
+          Comment = { fg = C.pink },
+          CmpItemMenu = { fg = C.pink, bg = C.None },
           CmpItemKindSnippet = { fg = C.base, bg = C.mauve },
           CmpItemKindKeyword = { fg = C.base, bg = C.red },
-          CmpItemKindText = { fg = C.base, bg = C.teal },
+          CmpItemKindText = { fg = C.base, bg = C.lavender },
           CmpItemKindMethod = { fg = C.base, bg = C.blue },
           CmpItemKindConstructor = { fg = C.base, bg = C.blue },
           CmpItemKindFunction = { fg = C.base, bg = C.blue },
