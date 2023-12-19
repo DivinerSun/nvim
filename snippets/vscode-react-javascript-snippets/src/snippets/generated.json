@@ -61,7 +61,7 @@
   },
   "typescriptReactFunctionalExportComponentOne": {
     "key": "typescriptReactFunctionalExportComponentOne",
-    "prefix": "rtfc",
+    "prefix": "rfct",
     "body": [
       "import { FC } from 'react'",
       "",

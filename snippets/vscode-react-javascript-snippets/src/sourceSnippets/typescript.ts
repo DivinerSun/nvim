@@ -24,7 +24,7 @@ type TypescriptMappings = {
   typescriptReactClassPureComponent: 'tsrpc';
   typescriptReactFunctionalComponent: 'tsrfc';
   typescriptReactFunctionalExportComponent: 'tsrfce';
-  typescriptReactFunctionalExportComponentOne: 'rtfc';
+  typescriptReactFunctionalExportComponentOne: 'rfct';
   typescriptReactNativeArrowFunctionComponent: 'tsrnf';
   typescriptReactNativeArrowFunctionComponentWithStyles: 'tsrnfs';
 };
@@ -98,7 +98,7 @@ const typescriptReactFunctionalExportComponent: TypescriptSnippet = {
 
 const typescriptReactFunctionalExportComponentOne: TypescriptSnippet = {
   key: 'typescriptReactFunctionalExportComponentOne',
-  prefix: 'rtfc',
+  prefix: 'rfct',
   body: [
     "import { FC } from 'react'",
     '',
