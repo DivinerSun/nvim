@@ -128,28 +128,104 @@
         "path": "./javascript-snippet/snippets/javascript.json"
       },
       {
-        "language": "javascriptreact",
+        "language": "html",
         "path": "./html/snippets/html.json"
       },
       {
-        "language": "typescriptreact",
+        "language": "css",
+        "path": "./html/snippets/css.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./html/snippets/javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./html/snippets/html.json"
+      },
+      {
+        "language": "javascriptreact",
         "path": "./html/snippets/html.json"
       },
       {
         "language": "javascript",
-        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+        "path": "./html/javascript/javascript.json"
       },
       {
         "language": "typescript",
-        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+        "path": "./html/snippets/html.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./vscode-react-javascript-snippets/src/snippets/generated.json"
+        "path": "./html/snippets/html.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./html/javascript/typescript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./html/javascript/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./html/javascript/react-es7.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./html/javascript/react-native.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./html/javascript/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./html/javascript/react-es7.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./html/javascript/react-native.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./html/javascript/react-ts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./html/javascript/react-es7.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./html/javascript/react-native-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./html/javascript/react-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./html/javascript/react-es7.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./html/javascript/react-native-ts.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./vscode-react-javascript-snippets/lib/snippets/generated.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./vscode-react-javascript-snippets/lib/snippets/generated.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vscode-react-javascript-snippets/lib/snippets/generated.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./vscode-react-javascript-snippets/lib/snippets/generated.json"
       },
       {
         "language": "vue",
@@ -202,10 +278,6 @@
       {
         "language": "typescript",
         "path": "./vue-vscode-snippets/snippets/nuxt-config.json"
-      },
-      {
-        "language": "html",
-        "path": "./html/snippets/html.json"
       }
     ]
   }

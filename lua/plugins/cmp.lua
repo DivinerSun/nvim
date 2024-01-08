@@ -392,6 +392,8 @@ return {
       require("nvim-treesitter.query_predicates")
     end,
     dependencies = {
+      "windwp/nvim-ts-autotag",
+      "windwp/nvim-autopairs",
       {
         "nvim-treesitter/nvim-treesitter-textobjects",
         config = function()
