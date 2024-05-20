@@ -231,6 +231,15 @@ return {
           skip = true,
         },
       })
+      table.insert(opts.routes, {
+        filter = {
+          event = "lsp",
+          find = "Linting...",
+        },
+        opts = {
+          skip = true,
+        },
+      })
       opts.presets.lsp_doc_border = true
       -- opts.presets.inc_rename = true
       table.insert(opts.presets, {
