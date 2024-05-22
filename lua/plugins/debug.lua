@@ -81,26 +81,13 @@ return {
     end,
     keys = {
       {
-        "<leader>dO",
-        function()
-          require("dap").step_out()
-        end,
-        desc = "Step Out",
-      },
-      {
-        "<leader>do",
-        function()
-          require("dap").step_over()
-        end,
-        desc = "Step Over",
-      },
-      {
         "<leader>da",
         function()
           if vim.fn.filereadable(".vscode/launch.json") then
             local dap_vscode = require("dap.ext.vscode")
             dap_vscode.load_launchjs(nil, {
               ["pwa-node"] = js_based_languages,
+              ["node"] = js_based_languages,
               ["chrome"] = js_based_languages,
               ["pwa-chrome"] = js_based_languages,
             })
@@ -156,6 +143,9 @@ return {
       {
         "Joakker/lua-json5",
         build = "./install.sh",
+        config = function()
+          table.insert(vim._so_trails, "/?.dylib")
+        end,
       },
     },
   },
