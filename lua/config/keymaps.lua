@@ -26,6 +26,12 @@ keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-q>", ":bdelete<CR>", opts)
 
+-- 窗口大小调整
+keymap("n", "<A-Right>", "<C-w>>", opts)
+keymap("n", "<A-Left>", "<C-w><", opts)
+keymap("n", "<A-Up>", "<C-w>+", opts)
+keymap("n", "<A-Down>", "<C-w>-", opts)
+
 -- 重命名快捷键
 keymap("n", "<A-r>", function()
   return ":IncRename " .. vim.fn.expand("<cword>")
